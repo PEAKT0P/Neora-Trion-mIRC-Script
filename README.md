@@ -1,5 +1,5 @@
 # Neora Trion mIRC Script
-
+![Neora Trion mIRC Script](Trion.png)
 ## English
 
 Neora Trion is a comprehensive mIRC script originally created by the NEORA Group (1999-2001). This script enhances the usability of mIRC with a fully-featured, Russian-language interface, designed to suit users of all experience levels.
@@ -22,7 +22,7 @@ This script now includes [mIRC_antispam_filter](https://github.com/PEAKT0P/mIRC_
 ---
 
 ## Русский
-
+![Neora Trion mIRC Script](Trion.png)
 Neora Trion — это комплексный mIRC-скрипт, изначально созданный NEORA Group (1999-2001). Скрипт улучшает функционал mIRC, предоставляя полноценный русскоязычный интерфейс, подходящий пользователям любого уровня подготовки.
 
 ### Основные возможности:
