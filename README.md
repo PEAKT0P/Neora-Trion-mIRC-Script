@@ -13,7 +13,7 @@ Neora Trion is a comprehensive mIRC script originally created by the NEORA Group
 
 ### Installation:
 1. Extract all files to the following directory:
-   `C:\Users\Professional\AppData\Roaming\mIRC\*`
+   `C:\Users\[UserName]\AppData\Roaming\mIRC\*`
 2. Launch mIRC as usual to start using the script.
 
 ### Additional:
@@ -34,7 +34,7 @@ Neora Trion — это комплексный mIRC-скрипт, изначал�
 
 ### Установка:
 1. Распакуйте все файлы в следующую директорию:
-   `C:\Users\Professional\AppData\Roaming\mIRC\*`
+   `C:\Users\[UserName]\AppData\Roaming\mIRC\*`
 2. Запустите mIRC как обычно, чтобы начать использовать скрипт.
 
 ### Дополнительно:
