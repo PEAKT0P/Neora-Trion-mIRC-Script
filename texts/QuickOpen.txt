@@ -1,0 +1,14 @@
+[1]
+1=PotPlayer
+
+[2]
+1=NotePad
+2=Notepad++
+
+[3]
+1=MSDOS
+2=Telnet
+
+[4]
+
+[5]

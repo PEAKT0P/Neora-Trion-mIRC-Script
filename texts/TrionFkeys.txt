@@ -1,0 +1,30 @@
+[NoKey]
+1=Fkey.Run.T.hlp
+10=Fkey.Run.F.lst
+9=Fkey.Run.Qamip
+12=Fkey.Run.N.Idnt
+8=Fkey.Run.toCyr
+5=Fkey.Run.N.chg
+6=Fkey.Run.N.ins
+7=Fkey.Run.ME
+11=Fkey.Run.Away
+4=Fkey.Run.OPme
+3=Fkey.Run.Ch.Inf
+
+[SHIFT]
+12=Fkey.Run.C.Idnt
+9=Fkey.Run.Skins
+6=msg $chan %QSmileFkeySHIFT6
+7=msg $chan %QFraseFkeySHIFT7
+4=Fkey.Run.Re
+5=Fkey.Run.N.inf
+1=Fkey.Run.Wiz
+
+[CTRL]
+5=Fkey.Run.Stop
+6=Fkey.Run.Prev
+7=Fkey.Run.Play
+8=Fkey.Run.Next
+4=Fkey.Run.Vup
+3=Fkey.Run.Vdn
+10=Fkey.Run.Clr.sl

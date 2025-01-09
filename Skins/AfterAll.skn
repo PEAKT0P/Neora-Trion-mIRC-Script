@@ -1,0 +1,150 @@
+;alias skinintro { return yes }
+alias skinauthor { return NEORA Group 1999-2001 }
+alias skinauthorEMail { return skins@neora.ru }
+alias skinauthorURL { return www.NEORA.ru }
+alias skinPreview { return AfterAll\afterall_logo.jpg }
+alias BGround.col { return 1 }
+alias action.col { return 0 }
+alias ctcp.col { return 6 }
+alias highlight.col { return 5 }
+alias info.col { return 5 }
+alias info2.col { return 5 }
+alias invite.col { return 7 }
+alias join.col { return 8 }
+alias kick.col { return 4 }
+alias mode.col { return 7 }
+alias nick.col { return 7 }
+alias normTXT.col { return 15 }
+alias notice.col { return 14 }
+alias notify.col { return 14 }
+alias otherTXT.col { return 0 }
+alias ownTXT.col { return 0 }
+alias part.col { return 6 }
+alias quit.col { return 5 }
+alias topic.col { return 7 }
+alias wallops.col { return 15 }
+alias whois.col { return 15 }
+alias editbox.col { return 5 }
+alias editboxTXT.col { return 8 }
+alias listbox.col { return 1 }
+alias listbox.TXT.col { return 15 }
+alias skn.MyColour { return 4 }
+alias skn.OPColour { return 7 }
+alias skn.VOColour { return 6 }
+alias skn.REColour { return 14 }
+alias bg.pic { return AfterAll\afterall_main.jpg }
+alias bg.pic.position { return f }
+alias toolbar.pic { return AfterAll\afterall_line.jpg }
+alias button.pic { return AfterAll\afterall_butt.jpg }
+alias switchbar.pic { return AfterAll\afterall_left.jpg }
+alias amippanel.pic { return AfterAll\AMIPpanel.bmp }
+alias skn.Comment { return 8*** AFTERaLL skin: ������� ��������. }
+;#----------
+alias skn.join.me { return 5��� 7Channel5:7 $chan 5- $+ $time $+ - }
+alias skn.see.topic { return 5��� 7Topic5:7 $1- }
+alias skn.who.topic { return 5��� 7Set by5:7 $1 � $asctime($2,hh�. nn���. dd.mm.yyyy) }
+alias skn.join { return 5��� 8Join5:8 $nick $+ 5!8 $+ $address 5- $+ $time $+ - }
+alias skn.part { 
+  if ($1 == $null) { return 5��� 6Part5:6 $nick $+ 5!6 $+ $address 5- $+ $time $+ - }
+  else { return 5��� 6Part5:6 $nick $+ 5!6 $+ $address 5(6 $+ $1- $+ 5) - $+ $time $+ - }
+}
+alias skn.quit { return 5��� 14Quit5:14 $nick $+ 5!14 $+ $address 5(14 $+ $1- $+ 5) - $+ $time $+ - }
+alias skn.kick.me { return 5��� 4Me Kicked by5:4 $nick $+ 5!4 $+ $address 5from 4 $chan 5Reason:4 $1- 5Time:4 $time }
+alias skn.kick { return 5��� 4Kick5:4 $knick 5kicked by4 $nick 5(4 $+ $1- $+ 5) - $+ $time $+ -  }
+alias skn.ban { return 5��� 4Ban5:4 $banmask 5by4 $nick 5- $+ $time $+ - }
+alias skn.ban.me { return  5��� 4Me Ban5: by4 $nick 5Mask:4 $banmask 5Time:4 $time }
+alias skn.unban { return 5��� 8unBan5:8 $banmask 5by8 $nick 5- $+ $time $+ - }
+alias skn.unban.me { return 5��� 8Me unBan5: by8 $nick 5Mask:8 $banmask 5Time:8 $time }
+alias skn.ow { return 5��� 8Mode5:8 $nick +q 5to8 $opnick 5- $+ $time $+ - }
+alias skn.ow.me { return 5��� 8Ow ME5:8 $nick +q 5to 8 $me 5- $+ $time $+ - }
+alias skn.deow { return 5��� 4Mode5:4 $nick -q 5to4 $opnick 5- $+ $time $+ - }
+alias skn.deow.me { return 5��� 4DeOw ME5:4 $nick -q 10to4 $me 5- $+ $time $+ - }
+alias skn.op { return 5��� 8Mode5:8 $nick +o 5to8 $opnick 5- $+ $time $+ - }
+alias skn.op.me { return 5��� 8Op ME5:8 $nick +o 5to 8 $me 5- $+ $time $+ - }
+alias skn.deop { return 5��� 4Mode5:4 $nick -o 5to4 $opnick 5- $+ $time $+ - }
+alias skn.deop.me { return 5��� 4DeOp ME5:4 $nick -o 10to4 $me 5- $+ $time $+ - }
+alias skn.voice { return 10��� 3Mode10:3 $nick +v 10to3 $opnick 10- $+ $time $+ - }
+alias skn.voice.me { return 10��� 3Vo ME10:3 $nick +v 10to3 $me 10- $+ $time $+ - }
+alias skn.devoice { return 10��� 4Mode10:4 $nick -v 10to4 $opnick 10- $+ $time $+ - }
+alias skn.devoice.me { return 10��� 4DeVo ME10:4 $nick -v 10to4 $me 10- $+ $time $+ - }
+alias skn.nick { return 5��� 7Nick5:7 $nick 5is now7 $newnick 5-7 $+ $time $+ 5- }
+alias skn.topic { return 5��� 7Topic5: $nick $+ :7 $1- 5-7 $+ $time $+ 5- }
+alias skn.mode { return 5��� 7Mode5: $nick $+ 7 $1-  5 $chan 7-5 $+ $time $+ 7- }
+alias skn.invite { return 5��� 7Invite5:7 $nick $+ 5! $+ 7 $address 5to7 $chan 5-7 $+ $time $+ 5- }
+alias skn.notify { return 5��� 8Notify5:8 $nick join SERVER }
+alias skn.unotify { return 5��� 8Notify5:8 $nick part SERVER }
+alias skn.ctcp.ask { return 5��� 6CTCP(ask)5:6 $1 5from6 $nick $+ 5!6 $+ $address }
+alias skn.ctcp.rep { 
+  if ($1 == PING) { return 5��� 6CTCP(rep)5:6 $1 5to6 $nick $+  $2 5(6get time+clock err.5:6~ $+ $calc($ctime - $2) sec5) }
+  else { return 5��� 6CTCP(rep)5:6 $1 5to6 $nick $+  $2- }
+}
+;#----------
+alias mcskn.join.me { return 5��� 7Channel5:7 %ds_troom 5- $+ $time $+ - }
+alias mcskn.see.topic { return 5��� 7Topic5:7 %ds_tmsg }
+alias mcskn.who.topic { return 5��� 7Set by5:7 %ds_tnick � $asctime(%ds_tmsg,hh�. nn���. dd.mm.yyyy) }
+alias mcskn.join { return 5��� 8Join5:8 %ds_tnick $+ 5!8 $+ %ds_tmp 5- $+ $time $+ - }
+alias mcskn.part { 
+  if (%ds_tmess == $null) { return 5��� 6Part5:6 %ds_tnick 5- $+ $time $+ - }
+  else { return 5��� 6Part5:6 %ds_tnick 5(6 $+ %ds_tmess- $+ 5) - $+ $time $+ - }
+}
+alias mcskn.quit { return 5��� 14Quit5:14 %ds_tnick 5(14 $+ %ds_tmess $+ 5) - $+ $time $+ - }
+alias mcskn.kick.me { return 5��� 4Me Kicked by5:4 %ds_tnick 5from 4 %ds_troom 5Reason:4 %ds_tmess 5Time:4 $time }
+alias mcskn.kick { return 5��� 4Kick5:4 %ds_tnick2 5kicked by4 %ds_tnick 5(4 $+ %ds_tmess $+ 5) - $+ $time $+ -  }
+alias mcskn.kick.selfme { return 5��� 4Kick5:4 Me 5kicked by4 myself 5(4 $+ %ds_tmess $+ 5) - $+ $time $+ -  }
+alias mcskn.kick.meto { return 5��� 4Kick5:4 %ds_tnick2 5kicked by4 Me 5(4 $+ %ds_tmess $+ 5) - $+ $time $+ -  }
+alias mcskn.kick.self { return 5��� 4Kick5:4 %ds_tnick2 5kicked by4 themself 5(4 $+ %ds_tmess $+ 5) - $+ $time $+ -  }
+alias mcskn.ow { return 5��� 8Mode5:8 %ds_tnick +q 5to8 %ds_tnick2 5- $+ $time $+ - }
+alias mcskn.ow.me { return 5��� 8Ow ME5:8 %ds_tnick +q 5to 8 Me 5- $+ $time $+ - }
+alias mcskn.ow.selfme { return 5��� 8Mode5:8 Me +q 5to8 myself 5- $+ $time $+ - }
+alias mcskn.ow.meto { return 5��� 8Mode5:8 Me +q 5to8 %ds_tnick2 5- $+ $time $+ - }
+alias mcskn.ow.self { return 5��� 8Mode5:8 %ds_tnick +q 5to8 themself 5- $+ $time $+ - }
+alias mcskn.deow { return 5��� 4Mode5:4 %ds_tnick -q 5to4 %ds_tnick2 5- $+ $time $+ - }
+alias mcskn.deow.me { return 5��� 4DeOw ME5:4 %ds_tnick -q 10to4 Me 5- $+ $time $+ - }
+alias mcskn.deow.selfme { return 5��� 4Mode5:4 Me -q 5to4 myself 5- $+ $time $+ - }
+alias mcskn.deow.meto { return 5��� 4Mode5:4 My -q 5to4 %ds_tnick2 5- $+ $time $+ - }
+alias mcskn.deow.self { return 5��� 4Mode5:4 %ds_tnick -q 5to4 themself 5- $+ $time $+ - }
+alias mcskn.op { return 5��� 8Mode5:8 %ds_tnick +o 5to8 %ds_tnick2 5- $+ $time $+ - }
+alias mcskn.op.me { return 5��� 8Op ME5:8 %ds_tnick +o 5to 8 Me 5- $+ $time $+ - }
+alias mcskn.op.selfme { return 5��� 8Mode5:8 Me +o 5to8 myself 5- $+ $time $+ - }
+alias mcskn.op.meto { return 5��� 8Mode5:8 Me +o 5to8 %ds_tnick2 5- $+ $time $+ - }
+alias mcskn.op.self { return 5��� 8Mode5:8 %ds_tnick +o 5to8 themself 5- $+ $time $+ - }
+alias mcskn.deop { return 5��� 4Mode5:4 %ds_tnick -o 5to4 %ds_tnick2 5- $+ $time $+ - }
+alias mcskn.deop.me { return 5��� 4DeOp ME5:4 %ds_tnick -o 10to4 Me 5- $+ $time $+ - }
+alias mcskn.deop.selfme { return 5��� 4Mode5:4 Me -o 5to4 myself 5- $+ $time $+ - }
+alias mcskn.deop.meto { return 5��� 4Mode5:4 Me -o 5to4 %ds_tnick2 5- $+ $time $+ - }
+alias mcskn.deop.self { return 5��� 4Mode5:4 %ds_tnick -o 5to4 themself 5- $+ $time $+ - }
+alias mcskn.voice { return 10��� 3Mode10:3 %ds_tnick +v 10to3 %ds_tnick2 10- $+ $time $+ - }
+alias mcskn.voice.me { return 10��� 3Vo ME10:3 %ds_tnick +v 10to3 Me 10- $+ $time $+ - }
+alias mcskn.voice.selfme { return 10��� 3Mode10:3 Me +v 10to3 myself 10- $+ $time $+ - }
+alias mcskn.voice.meto { return 10��� 3Mode10:3 Me +v 10to3 %ds_tnick2 10- $+ $time $+ - }
+alias mcskn.voice.self { return 10��� 3Mode10:3 %ds_tnick +v 10to3 themself 10- $+ $time $+ - }
+alias mcskn.devoice { return 10��� 4Mode10:4 %ds_tnick -v 10to4 %ds_tnick2 10- $+ $time $+ - }
+alias mcskn.devoice.me { return 10��� 4DeVo ME10:4 %ds_tnick -v 10to4 Me 10- $+ $time $+ - }
+alias mcskn.devoice.selfme { return 10��� 4Mode10:4 Me -v 10to4 myself 10- $+ $time $+ - }
+alias mcskn.devoice.meto { return 10��� 4Mode10:4 Me -v 10to4 %ds_tnick2 10- $+ $time $+ - }
+alias mcskn.devoice.self { return 10��� 4Mode10:4 %ds_tnick -v 10to4 themself 10- $+ $time $+ - }
+alias mcskn.nick { return 5��� 7Nick5:7 %ds_tnick 5is now7 %ds_mess 5-7 $+ $time $+ 5- }
+alias mcskn.nick.selfme { return 5��� 7Nick5:7 Your nick 5is now7 %ds_mess 5-7 $+ $time $+ 5- }
+alias mcskn.topic { return 5��� 7Topic5: %ds_tnick $+ :7 %ds_tmess 5-7 $+ $time $+ 5- }
+alias mcskn.invite { return 5��� 7Invite5:7 %ds_tnick 5to7 %ds_troom 5-7 $+ $time $+ 5- }
+alias mcskn.open { return =============> ������ �� %ds_tnick }
+alias skn.snd.connect { return afterall\connect.wav }
+alias skn.snd.join { return afterall\join.wav }
+alias skn.snd.op { return afterall\op.wav }
+alias skn.snd.deop { return afterall\deop.wav }
+alias skn.snd.owner { return afterall\owner.wav }
+alias skn.snd.deowner { return afterall\deowner.wav }
+alias skn.snd.voice { return afterall\op.wav }
+alias skn.snd.devo { return afterall\deop.wav }
+alias skn.snd.Ikick { return afterall\Iki�k.wav }
+alias skn.snd.mekicked { return afterall\mekicked.wav }
+alias skn.snd.ban { return afterall\closeroom.wav }
+alias skn.snd.invite { return afterall\invite.wav }
+alias skn.snd.disconnect { return afterall\disconnect.wav }
+alias skn.snd.ctcp.V { return afterall\version.wav }
+alias skn.snd.ctcp.P { return afterall\ping.wav }
+alias skn.snd.ctcp.T { return afterall\time.wav }
+alias skn.snd.flood { return afterall\flood.wav }
+alias skn.snd.notify { return afterall\useronln.wav }
+alias skn.snd.Unotify { return afterall\userlost.wav }
+alias skn.snd.newmemo { return afterall\memocome.wav }

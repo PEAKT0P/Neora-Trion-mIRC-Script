@@ -1,0 +1,419 @@
+;#####################################################################################
+;#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;ELEMENT skin (first origin NeoRa TrioN skin);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#
+;#;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;С коментариями по созданию Скинов для NeoRa TrioN;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;#
+;#####################################################################################
+
+;;----------------------------------------------------------------ОБЩИЕ ПРАВИЛА------------------------------------------------
+
+;!!! 1. Скин состоит из файла с расширением .skn и папки с вложенними в неё графическими и звуковыми файлами
+;!!!     Всё это кладётся в папку Skins в находящейся в деректории скрипта NEORA
+;!!! 2. Название файла и название папки должно совпадать (например: файл - element.skn ; папка ELEMENT)
+;!!!     Название Скина определяется по названию файла в данном случае скин называется ELEMENT
+;!!!##!!! 3.  ОЧЕНЬ ВАЖНО!!! В названии скина (а следовательно и в названиях файла и папки) НЕ ДОПУСТИМЫ ПРОБЕЛЫ !!!
+;!!! 4. Все Алиесы начинаются с команды RETURN. 
+;!!! 5.Если алиес предпологает прописку пути к какому-либо файлу то прописывается последняя часть пути по формуле: dirname\filename.*
+;!!! 6. Если алиес не должен передовать в Skin-скрипт ничего - просто не прописывайте этот алиес. Например если в Вашем скине 
+;!!!     не предусмотренна заставка то не прописывайте соответствующий алиес в данном случае это - skinintro
+
+;;---------------------------------------------------------ТЕПЕРЬ ПИШЕМ САМ СКИН--------------------------------------------
+
+;------ 1. АЛИЕСЫ содержащие информацию о Скине которая показвается в Skin-браузере (в диалоге смены скинов) -----------;
+
+;###Алиес (skinintro) передаётскрипту информацию о наличии заставки. !Если заставка не предусмотренна не прописывайте этот алиес!
+alias skinintro { return yes }
+
+;###Алиес (skinauthor) содержит информацию об авторе данного скина
+alias skinauthor { return NEORA Group 1999-2001 }
+
+;###Алиес (skinauthorEMail) - передаёт EMail-адрес автора скина
+alias skinauthorEMail { return skins@neora.ru }
+
+;###Алиес (skinauthorURL) - информация об URL автора скина
+alias skinauthorURL { return www.NEORA.ru }
+
+;###Алиес (skinauthorICQ) - информация об ICQ автора скина
+;       alias skinauthorICQ - в данном скине не указан
+
+;###Алиес (skinPreview) - путь к эмблеме Скина (если таковая имеется) которая выводится в Skin-броузере. 
+;       Корневым каталогом считается папка Skins находящаяся в корне mirc, 
+;       таким образом если полный путь к Эмблеме например C:\Program Files\NeoRa\Skins\Element\Elnt-logo.jpg
+;       то в алиес прописываем только Element\Elnt-logo.jpg
+;### Размер эмблемы: 198пиксел Х 66пиксел ; Цвет прозрачности RGB 192 192 192 ; Форматы .BMP или .JPG
+alias skinPreview { return Element\Elnt-logo.jpg }
+
+;-------------------------------------2. АЛИЕСЫ содержащие информацию о цветовом оформлении Вашего скина ----------------------------------------
+;############## Цифры соответствуют кодам цветов mIRC посмотреть которые можно нажатием Ctrl+K ############
+;############## в названии каждого алиеса есть элемент (список элементов можно увидеть нажав Alt + K) ##########
+;############## которому будет соответствовать выбраный цвет.                                                             ###############
+;############## пример: alias BGround.col { return 1 } - устанавливает чёрный цвет для бэкграунда и т. д.#############
+alias BGround.col { return 1 }
+alias action.col { return 0 }
+alias ctcp.col { return 6 }
+alias highlight.col { return 5 }
+alias info.col { return 10 }
+alias info2.col { return 12 }
+alias invite.col { return 12 }
+alias join.col { return 12 }
+alias kick.col { return 12 }
+alias mode.col { return 3 }
+alias nick.col { return 3 }
+alias normTXT.col { return 15 }
+alias notice.col { return 14 }
+alias notify.col { return 14 }
+alias otherTXT.col { return 0 }
+alias ownTXT.col { return 0 }
+alias part.col { return 12 }
+alias quit.col { return 12 }
+alias topic.col { return 3 }
+alias wallops.col { return 15 }
+alias whois.col { return 15 }
+alias editbox.col { return 10 }
+alias editboxTXT.col { return 1 }
+alias listbox.col { return 1 }
+alias listbox.TXT.col { return 15 }
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;Цвета ников в nicklict
+
+alias skn.MyColour { return 10 }
+alias skn.OPColour { return 11 }
+alias skn.VOColour { return 15 }
+alias skn.REColour { return 14 }
+
+;Коментарий к скрипту появляющийся сразу после его  загрузки в активном окне mIRC
+
+alias skn.Comment { return 10*** Element skin: успешно загружен. }
+
+
+;---------------------------3. АЛИЕСЫ содержащие информацию о фоновых картинках. Картинки могут быть в форматах .BMP или .JPG-------------------
+;###### В данной секции прописываются пути к картинкам для каждого элемента. 
+;###### ВАЖНО!!!Пути прописываются так же как для алиеса skinPreview который описан выше!!!
+;###### ВАЖНО!!! Если путь к файлу картинке C:\Program Files\Neo-Ra\Skins\Neo-WetAlt\Emblem.bmp то пишем Neo-WetAlt\Emblem.bmp
+;###### Элементы: Главное окно mIRC (alias bg.pic) ; Окно Status (alias status.pic) ; Панель инструментов (alias toolbar.pic) ;
+;######                  Кнопки на панели инструментов (alias button.pic) и Панель переключения окон (alias switchbar.pic)
+;###### Кроме того два алиеса в названии которых есть слово position - это алиесы передающие информацию о том как будут
+;###### распологаться картинки в окнах (в Главном окне мирк и в Окне Status). 
+;###### Варианты расположения: c (center) - по центру ; f (fill) - заполнить всё окно до границ;
+;######            n (normal) - нормальное изображение начинается с левого верхнего угла не нарушая размеров картинки
+;######            p (photo) - !этот параметр работает только для окна Status! помещает изображение в правый верхний угол
+;######            r (stretch) - пропорционально растянутое до ближайших границ окна (гориз. или вертик.) ;
+;######            t (tile) - заполнить все не нарушая размеров изображения (если картинка меньше окна - получится мозайка)
+
+;###### ВАЖНО!!!! Картинки в рабочих окнах (в нашем случае в окне Status) замедляют обновление окон.
+
+;### Картинка Главного окна mIRC и её позиция в окне (max. 800х510 пикс.)
+alias bg.pic { return element\Elnt-main.jpg }
+alias bg.pic.position { return f }
+
+;### Картинка Окна Status и её позиция в окне
+;alias status.pic { return element\status.bmp }
+;alias status.pic.position { return p }
+
+;### Картинка для Панели иструментов
+alias toolbar.pic { return element\Elnt-line.jpg }
+
+;### Картинка для кнопок на панели инструментов
+alias button.pic { return element\Elnt-butt.jpg }
+
+;### Картинка для панели переключения окон
+alias switchbar.pic { return element\Elnt-left.jpg }
+
+;### Картинка для МиниПанели AMIP (размер картинки  211х16 пиксел ; кнопки должны находиться в строгом 
+;### соответствии с теми что на дефолт-картинке иначе они будут работать не правильно. Кроме того если вы не 
+;### пропишите данную панель будет загружаться дефолт-картинка которая соответствует цветовой гамме 
+;### "голого" mIRC - это может смотреться неказисто с вашим скином ;)
+alias amippanel.pic { return element\AMIPpanel.bmp }
+
+;#-------------------------------------------------------4. АЛИАСЫ прорисовывающие то как будут отображаться события в вашем скине--------------------------------
+;### В данной секции прорисовывается изображение различных событийкоторые происходят на сервере
+;### В названии алиесов присутствуют названия событий, поэтому сооринтироваться для чего предназначен алиес не сложно
+;### Контрольные коды цвЕта , перебивают цветА которые прописаны в секции 2 данного скина.
+;### Для написания данной секции вам необходимо знать некоторые идентификаторы mIRC ($nick ; $chan ; $address и т д)
+;### Чтобы это не вызвало сложностей при написании данной секции скина держите открытым mIRC Help :o)) 
+;### чтобы его (mIRC Help) открыть наберите /help [ $идентификатор каторый вас интересует ] (напр: /help $banmask )
+;### В целом: 
+;###             $me - при любой ситуации это ваш ник
+;###             $nick - это тот кто вызвал срабатывание события ( например для события kick это тот кто кикает, а $knick - это кого кикнули )
+;###             $chan - это всегда канал на котором произошло событие (не работает в событиях серверного масштаба напр: QUIT или NICK )
+;###             $address - это адрес ника вызвавшего событие
+;###             $opnick - это тот кого опнули ( в этом событии (ON OP) $nick - это тот кто опнул)
+;###             $banmask - маска(адрес) который был забанен в событии ON BAN или разбанен в ON UNBAN
+;###             $time - это вроде время :)
+;###             $+ это так называемый склеиватель. Так как идентификаторы в строке не должны не чего касаться, 
+;###               но если в результате вы хотите чтоб оно было без пробела то пишем $+ . Например: $nick $+ -> $+ $newnick в итоге получим
+;###               чтото вроде Joyraid->AndyBig       ..... clear? ;-)
+;###     ну и так далее и в таком духе. Если уж сильно не понятно посмотрите другие скины и делайте по аналогии :)
+;### !Бесплатные советы! - прежде чем вписывать в эту секцию алиесы подумайте над единым стилем всего этого хозяйства (лучше с
+;### бумагой и ручкой в руке :-)) . Ещё не лишним будет проверять всё это через команду /echo - очень помогает и сберегает 
+;### кучу времени и нервов. Например (пример с первым алиесом из этой секции): в окне Status набираем :
+;###          //echo 11--=> Вы зашли на канал15 #Russian_Andybig 11- $+ $time $+          ....Здесь $идентиф-ор $chan не сработает
+;### Поэтому вместо идентификаторов подставляйте то что должно будет там стоять. Потом в алиесе ставте соотв-ющий $идентификатор.
+
+;#####-----------------ИТАК ПРИСТУПИМ.......
+
+;# skn.join.me - Прописывает то что будет выводится в активный канал когда вы на него зашли
+alias skn.join.me { return 10¤¤¤ 11Channel10:11 $chan 10- $+ $time $+ - }
+
+;#Показ топика при входе на канал
+alias skn.see.topic { return 10¤¤¤ 11Topic10:11 $1- }
+
+;# Показ информации при входе о том кто и когда поставил топик ($1 - кем установлен; $asctime($2,...) когда установлен)
+;# Разъяснения по поводу $ASCTIME: Описание этого идентификатора есть в mIRC Help. Наберите /help $asctime
+;# Тут ограничимся наиболее наглядными примерами.
+;# Допустим топик установлен в 21 часа 17 минут 13 секунд в Понедельник 5-го июня 2001 года)
+;# Пишем $asctime($2,dd.mm.yy hh:nn:mm ) получаем 05.06.01 21:17:13
+;# Пишем $asctime($2,dd mmmm около hh:nn:ss) получаем 05 June около 21:17:13 (причём слово ОКОЛО будет подчёркнуто (Ctrl+B))
+;# Пишем $asctime($2, в hhч. nnмин. dd.mm.yyyy) получим - в 21ч. 17мин. 05.06.2001
+;# Вобщем поэкспирементируйте и разберётесь :)     !!!( $asctime($2, - обязательный параметр )!!!
+
+alias skn.who.topic { return 10¤¤¤ 11Set by10:11 $1 10в11 $asctime($2,hhч. nnмин. dd.mm.yyyy) }
+
+
+;# Прописывает то что будет выводиться когда ктото зашёл на канал когда вы уже там :-)
+alias skn.join { return 10¤¤¤ 11Join10:11 $nick $+ 10!11 $+ $address 10- $+ $time $+ - }
+
+;# Кто-то ушёл с канала ( $1-  является полным текстом PART-сообщения )
+alias skn.part { 
+  if ($1 == $null) { return 10¤¤¤ 12Part10:12 $nick $+ 10!12 $+ $address 10- $+ $time $+ - }
+  else { return 10¤¤¤ 12Part10:12 $nick $+ 10!12 $+ $address 10(12 $+ $1- $+ 10) - $+ $time $+ - }
+}
+
+;# Кто-то ушёл с сервера (сдесь $1-  это всё Quit-сообщение, если просто $1 то это первое его слова $1-3 первые 3 слова ну и тд)
+;# Кроме того сдесь не сработает идентификатор $chan так как пользователь слетел со всех каналов то есть с сервера :)
+;# Для этих случаев есть иден-р $comchan - но для него нужно писать цикл - вам и нам это не нада, хотя если хотите можете попробывать :)
+alias skn.quit { return 10¤¤¤ 14Quit10:14 $nick $+ 10!14 $+ $address 10(14 $+ $1- $+ 10) - $+ $time $+ - }
+
+;# Вас кикнули
+alias skn.kick.me { return 10¤¤¤ 4Me Kicked by10:4 $nick $+ 10!4 $+ $address 10from 4 $chan 10Reason:4 $1- 10Time:4 $time }
+
+;# Кто-то кого-то кикнул ( $nick кикнул $knick с канала $chan )
+alias skn.kick { return 10¤¤¤ 4Kick10:4 $knick 10kicked by4 $nick 10(4 $+ $1- $+ 10) - $+ $time $+ -  }
+
+;# Бан
+alias skn.ban { return 10¤¤¤ 4Ban10:4 $banmask 10by4 $nick 10- $+ $time $+ - }
+alias skn.ban.me { return  10¤¤¤ 4Me Ban10: by4 $nick 10Mask:4 $banmask 10Time:4 $time }
+
+;# АнБан
+alias skn.unban { return 10¤¤¤ 3unBan10:3 $banmask 10by3 $nick 10- $+ $time $+ - }
+alias skn.unban.me { return 10¤¤¤ 3Me unBan10: by3 $nick 10Mask:3 $banmask 10Time:3 $time }
+
+;# Овнер - Деовнер (для IRCX серверов), Оп - Деоп, Войс - Девойс
+alias skn.ow { return 3>14[3Mode14]15 $nick 14 $+ $chr(187) 3+q14 $chr(187) 15 $+ $opnick 14<15 $+ $time $+ 14> }
+alias skn.ow.me { return 3>14[3Q ME14]15 $nick 14 $+ $chr(187) 3+q14 $chr(187) 15 $+ $opnick 14<15 $+ $time $+ 14> }
+alias skn.deow { return 4<14[4MODE14]15 $nick 14 $+ $chr(187) 4-q14 $chr(187) 15 $+ $opnick 14<15 $+ $time $+ 14> }
+alias skn.deow.me { return 4<14[4-Q ME14]15 $nick 14 $+ $chr(187) 4-q14 $chr(187) 15 $+ $opnick 14<15 $+ $time $+ 14> }
+
+alias skn.op { return 10¤¤¤ 3Mode10:3 $nick +o 10to3 $opnick 10- $+ $time $+ - }
+alias skn.op.me { return 10¤¤¤ 3Op ME10:3 $nick +o 10to 3 $me 10- $+ $time $+ - }
+alias skn.deop { return 10¤¤¤ 4Mode10:4 $nick -o 10to4 $opnick 10- $+ $time $+ - }
+alias skn.deop.me { return 10¤¤¤ 4DeOp ME10:4 $nick -o 10to4 $me 10- $+ $time $+ -  }
+
+alias skn.voice { return 10¤¤¤ 3Mode10:3 $nick +v 10to3 $opnick 10- $+ $time $+ - }
+alias skn.voice.me { return 10¤¤¤ 3Vo ME10:3 $nick +v 10to3 $me 10- $+ $time $+ - }
+alias skn.devoice { return 10¤¤¤ 4Mode10:4 $nick -v 10to4 $opnick 10- $+ $time $+ - }
+alias skn.devoice.me { return 10¤¤¤ 4DeVo ME10:4 $nick -v 10to4 $me 10- $+ $time $+ - }
+
+;#Смена ника ( $chan - не сработает так как ник меняется на всём сервере а не на одном канале :))
+alias skn.nick { return 10¤¤¤ 12Nick10:12 $nick 10is now12 $newnick 10-12 $+ $time $+ 10- }
+
+;#Смена топика ( $1-   это весь топик )
+alias skn.topic { return 10¤¤¤ 12Topic10: $nick $+ :12 $1- 10-12 $+ $time $+ 10- }
+
+
+;# Смена режима канала ($1 сам режим )
+alias skn.mode { return 10¤¤¤ 12Mode10: $nick $+ 12 $1-  10 $chan 10-12 $+ $time $+ 10- }
+
+;# Приглашение
+alias skn.invite { return 10¤¤¤ 12Invite10:12 $nick $+ 10! $+ 12 $address 10to12 $chan 10-12 $+ $time $+ 10- }
+
+;# Нотификация
+alias skn.notify { return 10¤¤¤ 14Notify10:14 $nick зашёл на сервер. }
+alias skn.unotify { return 10¤¤¤ 14Notify10:14 $nick покинул сервер. }
+
+;#Приват
+;alias skn.open { return *** Приват $nick }
+
+;#CTCP запрос и ответ ($1 это вид запроса, $2 это ответ на запрос. Примечание: ответ на пинг выделен для того чтобы можно было показать
+;#время за которое пинг долетел до вас (хотя это время очень сильно перекрывается погреностью  в точности часов компьтеров пользователей))
+
+alias skn.ctcp.ask { return 10¤¤¤ 6CTCP(ask)10:6 $1 10from6 $nick $+ 10!6 $+ $address }
+alias skn.ctcp.rep { 
+  if ($1 == PING) { return 10¤¤¤ 6CTCP(rep)10:6 $1 10to6 $nick $+  $2 10(6get time+clock err.10:6~ $+ $calc($ctime - $2) sec10) }
+  else { return 10¤¤¤ 6CTCP(rep)10:6 $1 10to6 $nick $+  $2- }
+}
+
+
+;#---------------------4-1. АЛИАСЫ прописывающие то как будут отображаться события в вашем скинев окнах мультиконнекта--------------------------------
+;##### Этот раздел почти полностью повторяет предыдущий, но его установки действуют только на окна мультиконнекта. В этом разделе нет стандартных
+;##### идентификаторов, в каждом событии участвуют свои идентификаторы в виде переменных. Плиз, попробуйте сами разобраться, какая переменная
+;##### что идентифицирует, расписывать все это у меня нет ни сил ни желания :))).
+;#####------- ВНИМАНИЕ! Этот раздел является обязательным, иначе эти события не будут отображаться в окнах мультиконнекта при подключенном
+;##### скине!
+
+;#Прописывает то что будет выводится в активный канал когда вы на него зашли
+alias mcskn.join.me { return 10¤¤¤ 11Channel10:11 %ds_troom 10- $+ $time $+ - }
+
+;#Показ топика при входе на канал
+alias mcskn.see.topic { return 10¤¤¤ 11Topic10:11 %ds_tmsg }
+
+;# Показ информации при входе о том кто и когда поставил топик (%ds_tnick - кем установлен; $asctime(%ds_tmsg,...) когда установлен)
+;# Разъяснения по поводу $ASCTIME: Описание этого идентификатора есть в mIRC Help. Наберите /help $asctime
+;# Тут ограничимся наиболее наглядными примерами.
+;# Допустим топик установлен в 21 часа 17 минут 13 секунд в Понедельник 5-го июня 2001 года)
+;# Пишем $asctime(%ds_tmsg,dd.mm.yy hh:nn:mm ) получаем 05.06.01 21:17:13
+;# Пишем $asctime(%ds_tmsg,dd mmmm около hh:nn:ss) получаем 05 June около 21:17:13 (причём слово ОКОЛО будет подчёркнуто (Ctrl+B))
+;# Пишем $asctime(%ds_tmsg, в hhч. nnмин. dd.mm.yyyy) получим - в 21ч. 17мин. 05.06.2001
+;# Вобщем поэкспирементируйте и разберётесь :)     !!!( $asctime(%ds_tmsg, - обязательный параметр )!!!
+
+alias mcskn.who.topic { return 10¤¤¤ 11Set by10:11 %ds_tnick 10в11 $asctime(%ds_tmsg,hhч. nnмин. dd.mm.yyyy) }
+
+
+;# Прописывает то что будет выводиться когда ктото зашёл на канал когда вы уже там :-)
+alias mcskn.join { return 10¤¤¤ 11Join10:11 %ds_tnick $+ 10!11 $+ %ds_tmp 10- $+ $time $+ - }
+
+;# Кто-то ушёл с канала ( %ds_tmess  является полным текстом PART-сообщения )
+alias mcskn.part { return 10¤¤¤ 12Part10:12 %ds_tnick 10(12 $+ %ds_tmess $+ 10) - $+ $time $+ - }
+
+;# Кто-то ушёл с сервера (сдесь %ds_tmess  это всё Quit-сообщение)
+alias mcskn.quit { return 10¤¤¤ 14Quit10:14 %ds_tnick 10(14 $+ %ds_tmess $+ 10) - $+ $time $+ - }
+
+;# Вас кикнули
+alias mcskn.kick.me { return 10¤¤¤ 4Me Kicked by10:4 %ds_tnick 10from 4 %ds_troom 10Reason:4 %ds_tmess 10Time:4 $time }
+
+;# Вы кикнули себя
+alias mcskn.kick.selfme { return 10¤¤¤ 4Me Kicked by Me!!! from 4 %ds_troom 10Reason:4 %ds_tmess 10Time:4 $time }
+
+;# Вы кикнули кого-то
+alias mcskn.kick.meto { return 10¤¤¤ 4Kick10:4 %ds_tnick2 10kicked by4 Me 10(4 $+ %ds_tmess $+ 10) - $+ $time $+ -  }
+
+;# Кто-то кикнул себя
+alias mcskn.kick.self { return 10¤¤¤ 4Kick10:4 %ds_tnick 10kicked by self (4 $+ %ds_tmess $+ 10) - $+ $time $+ -  }
+
+;# Кто-то кого-то кикнул 
+alias mcskn.kick { return 10¤¤¤ 4Kick10:4 %ds_tnick2 10kicked by4 %ds_tnick 10(4 $+ %ds_tmess $+ 10) - $+ $time $+ -  }
+
+;# Овнер - Деовнер (для IRCX серверов), Оп - Деоп, Войс - Девойс
+alias mcskn.ow { return 3>14[3Mode14]15 %ds_tnick 14 $+ $chr(187) 3+q14 $chr(187) 15 $+ %ds_tnick2 14<15 $+ $time $+ 14> }
+alias mcskn.ow.self { return 3>14[3Mode14]15 %ds_tnick 14 $+ $chr(187) 3+q14 $chr(187) 15 $+ themself 14<15 $+ $time $+ 14> }
+alias mcskn.ow.meto { return 3>14[3Mode14]15 Me 14 $+ $chr(187) 3+q14 $chr(187) 15 $+ %ds_tnick2 14<15 $+ $time $+ 14> }
+alias mcskn.ow.selfme { return 3>14[3Mode14]15 Me 14 $+ $chr(187) 3+q14 $chr(187) 15 $+ myself 14<15 $+ $time $+ 14> }
+alias mcskn.ow.me { return 3>14[3QME14]15 %ds_tnick 14 $+ $chr(187) 3+q14 $chr(187) 15 $+ Me 14<15 $+ $time $+ 14> }
+
+alias mcskn.deow { return 4<14[4MODE14]15 %ds_tnick 14 $+ $chr(187) 4-q14 $chr(187) 15 $+ %ds_tnick2 14<15 $+ $time $+ 14> }
+alias mcskn.deow.self { return 3>14[3Mode14]15 $nick 14 $+ $chr(187) 3-q14 $chr(187) 15 $+ themself 14<15 $+ $time $+ 14> }
+alias mcskn.deow.meto { return 3>14[3Mode14]15 Me 14 $+ $chr(187) 3-q14 $chr(187) 15 $+ %ds_tnick2 14<15 $+ $time $+ 14> }
+alias mcskn.deow.selfme { return 3>14[3Mode14]15 Me 14 $+ $chr(187) 3-q14 $chr(187) 15 $+ myself 14<15 $+ $time $+ 14> }
+alias mcskn.deow.me { return 4<14[4-Qme14]15 %ds_tnick 14 $+ $chr(187) 4-q14 $chr(187) 15 $+ Me 14<15 $+ $time $+ 14> }
+
+alias mcskn.op { return 10¤¤¤ 3Mode10:3 %ds_tnick +o 10to3 %ds_tnick2 10- $+ $time $+ - }
+alias mcskn.op.self { return 10¤¤¤ 3Mode10:3 %ds_tnick +o 10to3 themself 10- $+ $time $+ - }
+alias mcskn.op.meto { return 10¤¤¤ 3Mode10:3 Me +o 10to3 %ds_tnick2 10- $+ $time $+ - }
+alias mcskn.op.selfme { return 10¤¤¤ 3Mode10:3 Me +o 10to3 myself 10- $+ $time $+ - }
+alias mcskn.op.me { return 10¤¤¤ 3OpMe10:3 %ds_tnick +o 10to 3Me 10- $+ $time $+ - }
+
+alias mcskn.deop { return 10¤¤¤ 3Mode10:3 %ds_tnick -o 10to3 %ds_tnick2 10- $+ $time $+ - }
+alias mcskn.deop.self { return 10¤¤¤ 3Mode10:3 %ds_tnick -o 10to3 themself 10- $+ $time $+ - }
+alias mcskn.deop.meto { return 10¤¤¤ 3Mode10:3 Me -o 10to3 %ds_tnick2 10- $+ $time $+ - }
+alias mcskn.deop.selfme { return 10¤¤¤ 3Mode10:3 Me -o 10to3 myself 10- $+ $time $+ - }
+alias mcskn.deop.me { return 10¤¤¤ 3DeopMe10:3 %ds_tnick -o 10to 3Me 10- $+ $time $+ - }
+
+alias mcskn.voice { return 10¤¤¤ 3Mode10:3 %ds_tnick +v 10to3 %ds_tnick2 10- $+ $time $+ - }
+alias mcskn.voice.self { return 10¤¤¤ 3Mode10:3 %ds_tnick +v 10to3 themself 10- $+ $time $+ - }
+alias mcskn.voice.meto { return 10¤¤¤ 3Mode10:3 Me +v 10to3 %ds_tnick2 10- $+ $time $+ - }
+alias mcskn.voice.selfme { return 10¤¤¤ 3Mode10:3 Me +v 10to3 myself 10- $+ $time $+ - }
+alias mcskn.voice.me { return 10¤¤¤ 3VoMe10:3 %ds_tnick +v 10to3 Me 10- $+ $time $+ - }
+
+alias mcskn.devoice { return 10¤¤¤ 3Mode10:3 %ds_tnick -v 10to3 %ds_tnick2 10- $+ $time $+ - }
+alias mcskn.devoice.self { return 10¤¤¤ 3Mode10:3 %ds_tnick -v 10to3 themself 10- $+ $time $+ - }
+alias mcskn.devoice.meto { return 10¤¤¤ 3Mode10:3 Me -v 10to3 %ds_tnick2 10- $+ $time $+ - }
+alias mcskn.devoice.selfme { return 10¤¤¤ 3Mode10:3 Me -v 10to3 myself 10- $+ $time $+ - }
+alias mcskn.devoice.me { return 10¤¤¤ 3DevoMe10:3 %ds_tnick -v 10to3 Me 10- $+ $time $+ - }
+
+;#Смена ника
+alias mcskn.nick { return 10¤¤¤ 12Nick10:12 %ds_tnick 10is now12 %ds_mess 10-12 $+ $time $+ 10- }
+alias mcskn.nick.selfme { return 10¤¤¤ 12Nick10:12 Your nick 10is now12 %ds_mess 10-12 $+ $time $+ 10- }
+
+;#Смена топика
+alias mcskn.topic { return 10¤¤¤ 12Topic10: %ds_tnick $+ :12 %ds_tmess 10-12 $+ $time $+ 10- }
+
+;# Приглашение
+alias mcskn.invite { return 10¤¤¤ 12Invite10:12 %ds_tnick 10to12 %ds_troom 10-12 $+ $time $+ 10- }
+
+;#Приват
+alias mcskn.open { return =============> Приват от %ds_tnick }
+
+
+;------------------------------------5. АЛИЕСЫ прописывающие звуки для определённых событий (звуковое оформление скина)-------------------------; 
+;### Эта группа алиесов предназначена для озвучивания Вашего скина.
+;### Как и прежде в названии алиеса присутствует имя события для которого нужно прописать звук
+;### Правила прописи пути к звуковому файлу такие же как и для фоновых рисунков, то есть прописываем только 
+;### последнюю часть пути: dirname\filename.wav
+alias skn.snd.connect { return element\connect.wav }
+alias skn.snd.join { return element\join.wav }
+alias skn.snd.op { return element\op.wav }
+alias skn.snd.deop { return element\deop.wav }
+;alias skn.snd.owner { return element\owner.wav }
+;alias skn.snd.deowner { return element\deowner.wav }
+alias skn.snd.voice { return element\op.wav }
+alias skn.snd.devo { return element\deop.wav }
+alias skn.snd.Ikick { return element\Ikiсk.wav }
+alias skn.snd.mekicked { return element\mekicked.wav }
+alias skn.snd.ban { return element\ban.wav }
+;#alias skn.snd.unban { return element\unban.wav }
+alias skn.snd.invite { return element\invite.wav }
+alias skn.snd.disconnect { return element\disconnect.wav }
+alias skn.snd.ctcp.V { return element\version.wav }
+alias skn.snd.ctcp.P { return element\ping.wav }
+alias skn.snd.ctcp.T { return element\time.wav }
+alias skn.snd.flood { return element\flood.wav }
+alias skn.snd.notify { return element\useronln.wav }
+alias skn.snd.Unotify { return element\userlost.wav }
+alias skn.snd.newmemo { return element\memocome.wav }
+;;#####################################################
+
+
+;####### ЗАСТАВКА. Начальный алиес должен называться skn.intro
+
+alias skn.intro { 
+  window -dphxk[0] +d @Intro 1 1 $window(-1).w $window(-1).h @Intro 
+  var %x = 0 | var %y = 0
+  while (%x < $window(-1).w) {
+    drawline @Intro 10 1 %x 0 %x $window(-1).h 
+    drawpic -cs @Intro $calc($window(-1).w / 4) $calc($window(-1).h / 4) $calc($window(-1).w / 2) $calc($window(-1).h / 2) $shortfn($mircdir) $+ skins\Element\Elnt-main.jpg 
+    inc %x 10 | inc %y 10
+  }
+  var %x = 0 | var %y = 0 
+  while (%x < $window(-1).h) {
+    drawline @Intro 10 1 0 %y $window(-1).w %y
+    drawpic -cs @Intro $calc($window(-1).w / 4) $calc($window(-1).h / 4) $calc($window(-1).w / 2) $calc($window(-1).h / 2) $shortfn($mircdir) $+ skins\Element\Elnt-main.jpg 
+    inc %x 10 | inc %y 10
+  }
+  splay $shortfn($mircdir) $+ skins\Element\intro.wav 
+  var %i = 1 
+  while (%i < 350) {
+    if ($window(@Intro) != $null) {
+      drawfill -s @Intro %i $calc(%i + $r(1,5)) 0 0
+      if (%i < 150 && 3 // %i) drawtext -o @Intro $r(0,15) $skn.intro2($r(1,8)) $r(10,28) $r(1,$window(-1).w) $r(1,$window(-1).h) $skn.intro3($r(1,10))
+      if (%i > 150) drawtext -o @Intro $r(0,15) $skn.intro2($r(1,8)) $r(10,36) $r(1,$window(-1).w) $r(1,$window(-1).h) $skn.intro3($r(1,10))
+      if (%i > 250) drawtext -o @Intro $r(0,15) $skn.intro2($r(1,8)) $r(10,36) $r(1,$window(-1).w) $r(1,$window(-1).h) $skn.intro3($r(1,10))
+      if (%i > 300) { 
+        drawtext -o @Intro $r(0,15) $skn.intro2($r(1,8)) $r(10,36) $r(1,$window(-1).w) $r(1,$window(-1).h) $skn.intro3($r(1,6))
+        if ($timer(IntroEnd) == $null) { .timerIntroEnd 1 2 window -c @Intro }
+      } 
+    }    
+    inc %i 1
+  }
+}
+alias skn.intro2 {
+  if ($1 == 1) { return Terminal } | if ($1 == 2) { return Verdana } | if ($1 == 3) { return Courier } | if ($1 == 4) { return Fixedsys }
+  if ($1 == 5) { return Arial } | if ($1 == 6) { return Comic } | if ($1 == 7) { return System } | if ($1 == 8) { return Serif }
+}
+alias skn.intro3 {
+  if ($1 == 1) { return Neora TrioN } | if ($1 == 2) { return NEORA Group } | if ($1 == 3) { return NEORA TRION }
+  if ($1 == 4) { return NEORA Forever } | if ($1 == 5) { return NEORA Group } | if ($1 == 6) { return TRION RulezZ }
+  if ($1 == 7) { return MSN aLive!!! } | if ($1 == 8) { return www.NEORA.ru } | if ($1 == 9) { return Neora TRION } | if ($1 == 10) { return IRC }
+}
+
+menu @intro {
+  закрыть:window -c @intro
+}

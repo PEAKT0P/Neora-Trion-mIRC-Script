@@ -1,0 +1,58 @@
+:BASE Trion.hlp
+:TITLE NeoRa TrioN v1.0
+1 Âñòóïëåíèå=Intro@Trion.hlp
+1 Îïèñàíèå âîçìîæíîñòåé
+2 Dalnet - ñåğâèñû=Overview@Trion.hlp
+2 Ñîåäèíåíèå ñ íåñêîëüêèìè ñåğâåğàìè=Multic@Trion.hlp
+2 Neo Tools=NeoTools@Trion.hlp
+1 Íàñòğîéêè NickServ
+2 Identify=Identify_nickn@Trion.hlp
+2 Reg\Drop=RegDrop_nickn@Trion.hlp
+2 Options=Options_nickn@Trion.hlp
+2 Reg Info=RegInfo_nickn@Trion.hlp
+2 Access=Access_nickn@Trion.hlp
+2 Kills=Kills_nickn@Trion.hlp
+2 Logs=Logs_nickn@Trion.hlp
+1 Íàñòğîéêè ChanServ
+2 Identify=Identify_chann@Trion.hlp
+2 Reg\Drop=RegDrop_chann@Trion.hlp
+2 Options=Options_chann@Trion.hlp
+2 MLock=MLock_chann@Trion.hlp
+2 Reg Info=RegInfo_chann@Trion.hlp
+2 Lists=Lists_chann@Trion.hlp
+2 Logs=Logs_chann@Trion.hlp
+1 Äåéñòâèÿ ñ MemoServ
+2 Memoserv=ForwardMemo_memon@Trion.hlp
+1 Îáùèå íàñòğîéêè
+2 Íèêè=Nicks_othn@Trion.hlp
+2 Êàíàëû=Chans_othn@Trion.hlp
+2 CTCP=CTCP_othn@Trion.hlp
+2 Away=Away_othn@Trion.hlp
+2 Òîïèêè=Topics_othn@Trion.hlp
+2 Kick\Ban=KickBan_othn@Trion.hlp
+2 Quits=Quits_othn@Trion.hlp
+1 Íàñòğîéêè çàùèòû
+2 Flood çàùèòà
+3 ×òî òàêîå ôëóä íà IRC=WhaiIsFlood@Trion.hlp
+3 CTCP\DCC=CTCPDCC_floodprotn@Trion.hlp
+3 Text\Notice\Action=TextNoticeAction_floodprotn@Trion.hlp
+3 Mode\Invite\Open=ModeInviteOpen_floodprotn@Trion.hlp
+3 Flood-Kick Reasons=FloodKickReasons_floodprotn@Trion.hlp
+2 Ëè÷íàÿ çàùèòà
+3 Ban-Çàùèòà=Banprot_myprotn@Trion.hlp
+3 Kick-Çàùèòà=Kickprot_myprotn@Trion.hlp
+3 DeOp-Çàùèòà=DeOpprot_myprotn@Trion.hlp
+3 AJoin=AJoin_myprotn@Trion.hlp
+1 Íàñòğîéêè Interface
+2 Skin áğàóçåğ=Skin_facen@Trion.hlp
+2 Øğèôòû=Fonts_facen@Trion.hlp
+2 F-êëàâèøè=Fkeys_facen@Trion.hlp
+2 Quick Run=QuickRun_nastr@Trion.hlp
+1 Äğóãèå íàñòğîéêè
+2 Ñòèëèçàòîğ=Styles_randn@Trion.hlp
+2 Öåíçóğà=Censored_randn@Trion.hlp
+2 Ğåêëàìà=Advertise_randn@Trion.hlp
+2 Äğóãîå=Other_randn@Trion.hlp
+1 Äğóãèå õåëïû
+2 Ïîìîùü ïî IRC (eng)=1@ircintro.hlp>Main
+2 Ïîìîùü ïî mIRC 5.9 (eng)=1@mirc.hlp>Main

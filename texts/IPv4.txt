@@ -1,0 +1,126 @@
+INTERNET PROTOCOL V4 ADDRESS SPACE (last updated May 11 2001)
+
+The allocation of Internet Protocol version 4 (IPv4) address space to
+various registries is listed here.  Originally, all the IPv4 address
+spaces was managed directly by the IANA.  Later parts of the address
+space were allocated to various other registries to manage for
+particular purposes or regional areas of the world.  RFC 1466
+documents most of these allocations.
+
+Address Block	Registry - Purpose			
+--------------- --------------------------------------- 
+000		IANA - Reserved
+001		IANA - Reserved
+002		IANA - Reserved
+003		General Electric Company
+004		Bolt Beranek and Newman Inc.
+005		IANA - Reserved
+006		Army Information Systems Center
+007		IANA - Reserved
+008		Bolt Beranek and Newman Inc.
+009		IBM
+010		IANA - Private Use
+011		DoD Intel Information Systems
+012		AT&T Bell Laboratories
+013		Xerox Corporation
+014		IANA - Public Data Network
+015		Hewlett-Packard Company
+016		Digital Equipment Corporation
+017		Apple Computer Inc.
+018		MIT
+019		Ford Motor Company
+020		Computer Sciences Corporation
+021		DDN-RVN
+022		Defense Information Systems Agency
+023		IANA - Reserved			
+024		ARIN - Cable Block (Formerly IANA - Jul 95)
+025		Royal Signals and Radar Establishment
+026		Defense Information Systems Agency
+027		IANA - Reserved
+028		DSI-North
+029		Defense Information Systems Agency
+030		Defense Information Systems Agency
+031		IANA - Reserved
+032		Norsk Informasjonsteknologi
+033		DLA Systems Automation Center
+034		Halliburton Company
+035		MERIT Computer Network
+036		IANA - Reserved (Formerly Stanford University - Apr 93)
+037		IANA - Reserved
+038		Performance Systems International
+039		IANA - Reserved
+040		Eli Lily and Company
+041		IANA - Reserved
+042		IANA - Reserved
+043		Japan Inet
+044		Amateur Radio Digital Communications	
+045		Interop Show Network
+046		Bolt Beranek and Newman Inc.
+047		Bell-Northern Research
+048		Prudential Securities Inc.
+049		Joint Technical Command (Returned to IANA)
+050		Joint Technical Command (Returned to IANA)
+051		Deparment of Social Security of UK
+052		E.I. duPont de Nemours and Co., Inc.
+053		Cap Debis CCS
+054		Merck and Co., Inc.
+055		Boeing Computer Services
+056		U.S. Postal Service
+057		SITA
+058		IANA - Reserved
+059		IANA - Reserved
+060		IANA - Reserved
+061		APNIC - Pacific Rim
+062		RIPE NCC - Europe
+063		ARIN
+064		ARIN
+065		ARIN
+066		ARIN
+067-079		IANA - Reserved
+080		RIPE NCC
+081		RIPE NCC
+082-095		IANA - Reserved
+096-126		IANA - Reserved
+127		IANA - Reserved
+128-191		Various Registries
+192		Various Registries - MultiRegional
+193		RIPE NCC - Europe
+194		RIPE NCC - Europe
+195		RIPE NCC - Europe
+196		Various Registries
+197		IANA - Reserved
+198		Various Registries
+199		ARIN - North America
+200		ARIN - Central and South America
+201		Reserved - Central and South America
+202		APNIC - Pacific Rim
+203		APNIC - Pacific Rim
+204		ARIN - North America
+205		ARIN - North America
+206		ARIN - North America
+207		ARIN - North America
+208		ARIN - North America
+209		ARIN - North America
+210		APNIC - Pacific Rim
+211		APNIC - Pacific Rim
+212		RIPE NCC - Europe
+213		RIPE NCC - Europe
+214		US-DOD
+215		US-DOD
+216		ARIN - North America
+217		RIPE NCC - Europe
+218		APNIC - Pacific Rim 
+219-223		IANA - Reserved
+224-239		IANA - Multicast
+240-255		IANA - Reserved
+============================================
+12http://www.mark-itt.ru/NOC/whois.htm - Услуга Whois
+============================================
+Для того чтобы быстро узнать кому принадлежит IP по первой его части просмотрите таблицу данную выше
+
+Для справки:
+- IANA (Internet Assigned Numbers Authority) основная организация, занимающаяся вопросами координации выделения IP-адресов. 12http://www.iana.org/
+- RIPE (Reseaux IP Europeens) организация европейских Интернет-провайдеров. RIPE NCC (Reseaux IP Europeens Network Coordination Centre) 12http://www.ripe.net
+- ARIN (American Registry for Internet Numbers) регистр IP-адресов Америки. 12www.arin.net
+- APNIC (Asia Pacific Network Information Centre) регистр IP-адресов Азии. 12www.apnic.net
+===========================================
